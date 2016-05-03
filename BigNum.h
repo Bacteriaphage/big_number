@@ -9,7 +9,7 @@ class BigNum {
 
 public:
 
-	static void operationManager(string &a, const string& op, string &b);
+	static string operationManager(string &a, const string& op, string &b);
 
 	static bool swap(vector<unsigned int> &a, vector<unsigned int> &b);
 

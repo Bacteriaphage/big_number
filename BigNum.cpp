@@ -376,7 +376,7 @@ num1
 mod 
 num2
 */
-void BigNum::operationManager(string &a, const string &operation, string &b) {
+string BigNum::operationManager(string &a, const string &operation, string &b) {
 	vector <unsigned int> first, second;
 	string output;
 	for (int i = 0; i < a.length(); i++) {
@@ -460,4 +460,5 @@ void BigNum::operationManager(string &a, const string &operation, string &b) {
 			output = BigNum::mod(first, second);
 	}
 	cout << output << endl;
+	return output;
 }
