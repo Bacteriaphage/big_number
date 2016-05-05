@@ -5,11 +5,11 @@
 // in add operation, make first operand longer than second one 
 bool BigNum::swap(vector<unsigned int> &a, vector<unsigned int> &b) {
 	vector<unsigned int> temp;
-	for (int i = 0; i < a.size();) {
+	for (int i = 0; i < a.size() - 1;) {
 		if (a[i] == 0) a.erase(a.begin());
 		else break;
 	}
-	for (int i = 0; i < a.size();) {
+	for (int i = 0; i < a.size() - 1;) {
 		if (b[i] == 0) b.erase(b.begin());
 		else break;
 	}
@@ -21,7 +21,7 @@ bool BigNum::swap(vector<unsigned int> &a, vector<unsigned int> &b) {
 	}
 	if (a.size() == b.size()) {
 		for (int i = 0; i < a.size(); i++) {
-			if (a[i] > b[i]) break;
+			if (a[i] >= b[i]) break;
 			if (a[i] < b[i])
 			{
 				temp = a;
