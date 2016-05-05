@@ -264,8 +264,13 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 	string output;
 	int counter = 0;
 	temp1 = BigNum::minus(a, b);
-	if (temp1[0] == '-') return "0";                                       //a is less than b, return
-
+	if (temp1[0] == '-') {                                                 //a is less than b, return
+		for (int i = 0; i < b.size();i++) {
+			temp2.push_back(b[i] + '0');
+		}
+		return temp2; 
+	}
+	
 	bool equalength = false;                                               //whether the first high segment of a is greater than b
 																		   //convert vector to string and reuse minus function!!
 	for (int i = 0; i < b.size(); i++) {
