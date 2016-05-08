@@ -274,7 +274,7 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 		return temp2;
 	}
 
-	bool equalength = false;                                               //whether the first high segment of a is greater than b
+	bool equalength = true;                                               //whether the first high segment of a is greater than b
 																		   //convert vector to string and reuse minus function!!
 	for (int i = 0; i < b.size(); i++) {
 		second1.push_back(b[i]);
@@ -282,8 +282,8 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 	
 	//find when high segment of a is greater than b
 	for (int i = 0; i < b.size(); i++) {
-		if (a[i] > b[i]) {
-			equalength = true;
+		if (a[i] < b[i]) {
+			equalength = false;
 			break;
 		}
 	}
