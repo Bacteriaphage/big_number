@@ -79,7 +79,7 @@ string BigNum::minus(vector<unsigned int> &a, vector<unsigned int> &b) {
 			carry = thisDigit < 0 ? 1 : 0;
 		}
 	}
-	for (int i = 0; i < result.size() - 1; i++) {                      //get rid of consecutive 0 in high digits
+	for (int i = 0; i < result.size() - 1;) {                      //get rid of consecutive 0 in high digits
 		if (result.back() == 0) result.pop_back();
 		else break;
 	}
