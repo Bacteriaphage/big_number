@@ -418,7 +418,7 @@ string BigNum::operationManager(string &a, const string &operation, string &b) {
 	//times
 	else if (operation == "*") {
 		if (a == "0" || b == "0")
-			output == "0";
+			output = "0";
 		else {
 			if ((a[0] == '-' && b[0] != '-') || (a[0] != '-' && b[0] == '-')) {
 				output = '-' + BigNum::times(first, second);
