@@ -183,7 +183,7 @@ string BigNum::divide(vector<unsigned int> &a, vector<unsigned int> &b) {
 			if (i >= a.size()) break;
 			segment.push_back(a[i]);
 			temp2.push_back(a[i] + '0');
-			for (int i = 0; i < temp2.size();) {
+			for (int i = 0; i < temp2.size() - 1;) {
 				if (temp2[i] == '0') temp2.erase(temp2.begin());
 				else break;
 			}
@@ -217,7 +217,7 @@ string BigNum::divide(vector<unsigned int> &a, vector<unsigned int> &b) {
 			if (i >= a.size()) break;
 			segment.push_back(a[i]);
 			temp2.push_back(a[i] + '0');
-			for (int i = 0; i < temp2.size();) {
+			for (int i = 0; i < temp2.size() - 1;) {
 				if (temp2[i] == 0) temp2.erase(temp2.begin());
 				else break;
 			}
@@ -309,7 +309,7 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 			if (i >= a.size()) break;
 			segment.push_back(a[i]);
 			temp2.push_back(a[i] + '0');
-			for (int i = 0; i < temp2.size();) {
+			for (int i = 0; i < temp2.size() - 1;) {
 				if (temp2[i] == '0') temp2.erase(temp2.begin());
 				else break;
 			}
@@ -341,7 +341,7 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 			if (i >= a.size()) break;
 			segment.push_back(a[i]);
 			temp2.push_back(a[i] + '0');
-			for (int i = 0; i < temp2.size();) {
+			for (int i = 0; i < temp2.size() - 1;) {
 				if (temp2[i] == '0') temp2.erase(temp2.begin());
 				else break;
 			}
