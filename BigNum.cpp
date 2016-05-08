@@ -5,11 +5,19 @@
 // in add operation, make first operand longer than second one 
 bool BigNum::swap(vector<unsigned int> &a, vector<unsigned int> &b) {
 	vector<unsigned int> temp;
+<<<<<<< HEAD
+	for (int i = 0; i < a.size()-1;) {
+		if (a[i] == 0) a.erase(a.begin());
+		else break;
+	}
+	for (int i = 0; i < a.size()-1;) {
+=======
 	for (int i = 0; i < a.size() - 1;) {
 		if (a[i] == 0) a.erase(a.begin());
 		else break;
 	}
 	for (int i = 0; i < a.size() - 1;) {
+>>>>>>> d37f10b584e68c341251ea53842023cb8f460275
 		if (b[i] == 0) b.erase(b.begin());
 		else break;
 	}
@@ -58,7 +66,6 @@ string BigNum::add(vector<unsigned int> &a, vector<unsigned int> &b) {
 		output.push_back(result[result.size() - 1 - i] + '0');
 	}
 	return output;
-
 }
 
 string BigNum::minus(vector<unsigned int> &a, vector<unsigned int> &b) {
@@ -264,6 +271,19 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 	string output;
 	int counter = 0;
 	temp1 = BigNum::minus(a, b);
+<<<<<<< HEAD
+	if (temp1[0] == '-') {          //a is less than b, return
+		for (int i = 0; i < b.size();i++) {
+			temp2.push_back(b[i] + '0');
+		}
+		return temp2;
+	}
+	else if (temp1[0] == '0') {
+		temp2.push_back('0');
+		return temp2;
+	}
+
+=======
 	if (temp1[0] == '-') {                                                 //a is less than b, return
 		for (int i = 0; i < b.size();i++) {
 			temp2.push_back(b[i] + '0');
@@ -271,11 +291,13 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 		return temp2; 
 	}
 	
+>>>>>>> d37f10b584e68c341251ea53842023cb8f460275
 	bool equalength = false;                                               //whether the first high segment of a is greater than b
 																		   //convert vector to string and reuse minus function!!
 	for (int i = 0; i < b.size(); i++) {
 		second1.push_back(b[i]);
 	}
+	
 	//find when high segment of a is greater than b
 	for (int i = 0; i < b.size(); i++) {
 		if (a[i] > b[i]) {
@@ -309,7 +331,11 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 			if (i >= a.size()) break;
 			segment.push_back(a[i]);
 			temp2.push_back(a[i] + '0');
+<<<<<<< HEAD
+			for (int i = 0; i < temp2.size()-1;) {
+=======
 			for (int i = 0; i < temp2.size() - 1;) {
+>>>>>>> d37f10b584e68c341251ea53842023cb8f460275
 				if (temp2[i] == '0') temp2.erase(temp2.begin());
 				else break;
 			}
@@ -341,7 +367,11 @@ string BigNum::mod(vector<unsigned int> &a, vector<unsigned int> &b) {
 			if (i >= a.size()) break;
 			segment.push_back(a[i]);
 			temp2.push_back(a[i] + '0');
+<<<<<<< HEAD
+			for (int i = 0; i < temp2.size()-1;) {
+=======
 			for (int i = 0; i < temp2.size() - 1;) {
+>>>>>>> d37f10b584e68c341251ea53842023cb8f460275
 				if (temp2[i] == '0') temp2.erase(temp2.begin());
 				else break;
 			}
