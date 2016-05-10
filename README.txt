@@ -49,6 +49,19 @@ This method uses times() repeatedly and use minus() to minus counter.
 mod()
 This method is similar with divide() but output last remainder of divide operation.
 
+Part2 primetest(Author: Yunfei Lu, Shaobo Liu)
 
+The primeCheck class uses four methods to check big prime numbers. 
+The four methods are :
+i. brute force methods 
+ii. Eratosthenes’ sieve
+iii. Fermat
+iv. Miller­Rabin
+These four methods all implement the BigNum.h for a big number. We using string instead of int to use these methods. We also add a CLOCK to calculate  the time and compare which one uses less time. 
 
+Brute force :
+We start with 2 , when n mod==0, it is not  a prime number.  Otherwise, it is a prime number. The clock calculate the time when this method finished.
+
+Eratosthenes’ sieve :
+We build a boolean array, with size of A+1. At the beginning, we set every elements to true. We use i start from a the 2, the every j start from i*i , adding i each time(less than A+1), is not a prime.
  
